@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>One Last Thing ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:
+      radial-gradient(circle at top left,#ff4d8d55,transparent 30%),
+      radial-gradient(circle at bottom right,#ff99bb33,transparent 30%),
+      #0f0f1a;
+
+      font-family:'Poppins',sans-serif;
+      color:white;
+      padding:20px;
+      overflow:hidden;
+    }
+
+    .container{
+
+      max-width:850px;
+      padding:50px;
+      border-radius:30px;
+
+      background:rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(12px);
+
+      text-align:center;
+
+      animation:fade 1.5s ease;
+    }
+
+    @keyframes fade{
+
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:5rem;
+      margin-bottom:25px;
+      color:#ffd6e5;
+    }
+
+    p{
+      font-size:1.2rem;
+      line-height:2;
+      color:#f8dfe8;
+      margin-bottom:20px;
+    }
+
+    .question{
+
+      margin-top:40px;
+      font-size:2rem;
+      font-weight:600;
+      color:#ffbdd2;
+
+    }
+
+    .buttons{
+
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+
+    }
+
+    button{
+
+      border:none;
+      padding:16px 35px;
+      border-radius:50px;
+
+      font-size:1rem;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .yes{
+
+      background:linear-gradient(135deg,#ff4d8d,#ff7ca8);
+      color:white;
+
+      box-shadow:0 10px 30px rgba(255,77,141,0.4);
+
+    }
+
+    .yes:hover{
+      transform:scale(1.06);
+    }
+
+    .no{
+
+      background:white;
+      color:#ff4d8d;
+
+    }
+
+    .final-message{
+
+      margin-top:40px;
+      font-size:1.5rem;
+      display:none;
+      color:#ffe3ec;
+      line-height:2;
+
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:3.5rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+      .question{
+        font-size:1.5rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Alifiya ❤️</h1>
+
+    <p>
+      Somewhere between our late night talks,
+      your smile,
+      your voice,
+      and all our memories...
+      I fell for you.
+    </p>
+
+    <p>
+      And honestly?
+      I don’t want this to just stay a “what if”.
+    </p>
+
+    <p>
+      I want to love you properly,
+      openly,
+      genuinely,
+      and wholeheartedly.
+    </p>
+
+    <div class="question">
+      Will you be my girlfriend? ❤️
+    </div>
+
+    <div class="buttons">
+
+      <button class="yes" onclick="sayYes()">
+        YES ❤️
+      </button>
+
+      <button class="no" id="noBtn">
+        No
+      </button>
+
+    </div>
+
+    <div class="final-message" id="finalMessage">
+
+      YOU JUST MADE ME THE HAPPIEST PERSON ALIVE 😭❤️
+
+      <br><br>
+
+      I promise to annoy you forever now.
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function sayYes(){
+
+      document.getElementById('finalMessage').style.display = 'block';
+
+    }
+
+    const noBtn = document.getElementById('noBtn');
+
+    noBtn.addEventListener('mouseover', () => {
+
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 300) - 150;
+
+      noBtn.style.transform =
+      `translate(${x}px, ${y}px)`;
+
+    });
+
+  </script>
+
+</body>
+</html>
