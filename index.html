@@ -478,6 +478,36 @@
       starsContainer.appendChild(star);
     }
 
+        const meetDate = new Date("2025-04-24T23:08:00");
+
+    function updateLoveTimer(){
+
+      const now = new Date();
+
+      const diff = now - meetDate;
+
+      const seconds = Math.floor(diff / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+
+      const remainingHours = hours % 24;
+      const remainingMinutes = minutes % 60;
+      const remainingSeconds = seconds % 60;
+
+      document.getElementById("loveTimer").innerHTML =
+      `
+      ${days} Days ❤️<br>
+      ${remainingHours} Hours 💕<br>
+      ${remainingMinutes} Minutes 💖<br>
+      ${remainingSeconds} Seconds ✨
+      `;
+    }
+
+    updateLoveTimer();
+
+    setInterval(updateLoveTimer,1000);
+
   </script>
 
 </body>
